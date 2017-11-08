@@ -5,6 +5,4 @@ coverage/
 .idea/
 .tmp/
 dist/
-*.html
-ideal.directive.js
 npm-debug.log

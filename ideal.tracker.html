@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dragon Drop for AngularJS</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/2.3.1/spruce/bootstrap.min.css">
+  <style>
+    [btf-dragon] {
+      padding: 20px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body ng-app="ExampleApp">
+
+  <div class="container" ng-controller="MainCtrl">
+
+    <haar-face-tracker></haar-face-tracker>
+    <bbf-face-tracker></bbf-face-tracker>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jsfeat-min.js"></script>
+  <script type="text/javascript" src="js/frontalface.js"></script>
+  <script type="text/javascript" src="js/compatibility.js"></script>
+  <script type="text/javascript" src="js/profiler.js"></script>
+  <script src="tracker.js"></script>
+  <script>
+    angular.module('ExampleApp', ['Saurabh619.ng-face-tracker']).
+    controller('MainCtrl', function($scope) {});
+  </script>
+</body>
+
+</html>

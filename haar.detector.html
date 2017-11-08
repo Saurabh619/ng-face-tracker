@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="A JavaScript Computer Vision Library">
+  <meta name="author" content="Eugene Zatepyakin">
+  <title>JSFeat - JavaScript Computer Vision Library.</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:regular,bold|Inconsolata|PT+Sans:400,700">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/jsfeat.css">
+</head>
+
+<body cz-shortcut-listen="true" ng-app="ExampleApp">
+
+  <div class="container" ng-controller="MainCtrl">
+    <haar-face-tracker></haar-face-tracker>
+  </div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jsfeat-min.js"></script>
+  <script type="text/javascript" src="js/frontalface.js"></script>
+  <script type="text/javascript" src="js/compatibility.js"></script>
+  <script type="text/javascript" src="js/profiler.js"></script>
+  <script type="text/javascript" src="tracker.js"></script>
+  <script>
+    angular.module('ExampleApp', ['Saurabh619.ng-face-tracker']).
+    controller('MainCtrl', function($scope) {});
+  </script>
+</body>
+
+</html>
