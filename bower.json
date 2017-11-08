@@ -5,7 +5,7 @@
     "Saurabh619 <nandwana.saurabh619@gmail.com>"
   ],
   "description": "Haar cascade face detector and Brightness binary feature object detector | Computer vision implementations",
-  "main": "directive.js",
+  "main": "tracker.js",
   "license": "MIT",
   "homepage": "unfoundbox.github.io",
   "private": false,
