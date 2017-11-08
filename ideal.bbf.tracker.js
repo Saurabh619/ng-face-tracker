@@ -39,7 +39,19 @@ directive('bbfFaceTracker', function($document, $compile, $rootScope) {
   return {
     restrict: 'A',
 
-    compile: function(container, attr) {
+    compile: function(element, attr) {
+      var type = attr.type || 'text';
+      var required = attr.hasOwnProperty('required') ? "required='required'" : "";
+      var htmlText = '<video haar-face-tracker id="webcam" width="640" height="480" style="display:none;" src="blob:https://inspirit.github.io/4227dcb7-5b00-4a15-9ae9-5a41b4a24a55"></video>' +
+        '<div style=" width:640px;height:480px;margin: 10px auto;">' +
+        '<canvas id="canvas" width="640" height="480"></canvas>' +
+        '<div id="no_rtc" class="alert alert-error" style="display:none;"></div>' +
+        '<div id="log" class="alert alert-info"><strong>FPS: 14.85</strong><br>haar detector: 63ms</div>' +
+        '</div></div>'
+      element.replaceWith(htmlText);
+    }
+
+    return function(scope, elt, attr) {
 
       function tracker() {
         // lets do some fun
@@ -172,15 +184,14 @@ directive('bbfFaceTracker', function($document, $compile, $rootScope) {
         }
       }
 
-      return function(scope, elt, attr) {
-        $(window).load(function() {
-          tracker();
-          $(window).unload(function() {
-            video.pause();
-            video.src = null;
-          });
+      $(window).load(function() {
+        tracker();
+        $(window).unload(function() {
+          video.pause();
+          video.src = null;
         });
-      };
-    }
-  };
+      });
+    };
+  }
+};
 });
