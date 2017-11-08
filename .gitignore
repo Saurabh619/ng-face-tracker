@@ -1,0 +1,10 @@
+node_modules/
+bower_components/
+coverage/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+*.html
+ideal.directive.js
+npm-debug.log
