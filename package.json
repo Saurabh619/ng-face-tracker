@@ -1,0 +1,11 @@
+{
+  "name": "ng-face-tracker",
+  "version": "1.0.0",
+  "description": "Haar cascade face detector and Brightness binary feature object detector | Computer vision implementations",
+  "main": "directive.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh619",
+  "license": "ISC"
+}
