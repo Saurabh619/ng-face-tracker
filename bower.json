@@ -8,7 +8,7 @@
   "main": "directive.js",
   "license": "MIT",
   "homepage": "unfoundbox.github.io",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
